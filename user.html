@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos Form</title>
+</head>
+<body>
+    <form id="form1" action="/index.html" method="POST"  novalidate  oninput="x.value=parseInt(frange.value)">
+
+        <!-- ELEMENTO FIELDSET-->
+
+        <fieldset>
+            <legend>Campos do Usuário</legend>
+            <label for="fnome1">Nome:</label><br>
+            <input type="text" id="fnome1" name="fnome1" placeholder="Primeiro Nome"  autofocus>
+            <br>
+            <label for="fidade1">Idade:</label><br>
+            <input type="text" id="fidade1" name="fidade1" placeholder="18" >
+            <br>
+            
+            <label for="fidade1">Endereço:</label><br>
+            <input type="text" id="fendereco1" name="fendereco1" readonly>
+            <br><br>
+
+        </fieldset>
+
+        <!-- ELEMENTO TEXTAREA -->
+        <label for="ftextArea">Caixa de texto:</label><br>
+         <textarea name="ftextArea" id="ftextArea" cols="30" rows="10">texto em textarea   
+         </textarea>
+         <br><br> 
+
+       <!-- ELEMENTO DATALIST-->
+        <label for="fdlist">DataList:</label><br>
+        <input list="fdlist" name="fdlist">
+        <datalist id="fdlist">
+           <option value="Internet Explorer">IE</option>
+           <option value="Opera">OP</option>
+           <option value="Chrome">CH</option>
+           <option value="Firefox">FI</option>
+           <option value="safari">SA</option>    
+        </datalist>
+
+         <br><br> 
+        <!-- ELEMENTO SELECT -->
+        <label for="fselect">Escolha um carro:</label><br>
+        <select name="fselect" id="fselect" size=3 multiple>
+            <option value="Volvo">Volvo</option>
+            <option value="Fiat">Fiat</option>
+            <option value="Audi" selected>Audi</option>
+            <option value="Mercedes">Mercedes</option>
+        </select>
+        <br><br>
+        <!--  ELEMENTO INPUT-->
+        <!-- Campo de texto Alfanumérico -->
+        <label for="fnome">Nome:</label><br>
+        <input type="text" id="fnome" name="fnome" value="Primeiro Nome" disabled>
+        <br>
+        <label for="fidade">Idade:</label><br>
+        <input type="text" id="fidade" name="fidade" value="Idade" required>
+        <br>
+        
+        <label for="fidade">Endereço:</label><br>
+        <input type="text" id="fendereco" name="fendereco" readonly>
+        <br><br>
+        <!-- Campo de numérico -->
+        <label for="fnumber">Entre com um número de 1 a 130:</label>
+        <input type="number" id="fnumber" name="fnumber" min="1" max="130">
+        <br><br>
+
+        <label for="fnumber1">Pontos (intervalos de 3 e 3)</label>
+        <input type="number" id="fnumber1" name="fnumber1" step="3">
+        <br><br>
+        <!-- Intervalo -->
+        <label for="frange">Intervalo (0-50):</label>
+        <input type="range" id="frange" name="frange" min="0" max="50">
+           <br><br>
+        <output name="x" for="frange" value="0"></output>
+        <br><br>
+
+        <!--Campo de  Senha -->
+        <br>
+        <label for="fsenha">Senha:</label><br>
+        <input type="password" id="fsenha" name="fsenha" maxlength="5">
+        <br>
+        <br>
+
+        <!--Radio Button -->
+        
+        <input type="radio" name="fescolha" id="fopcaoSim" value="Sim" checked >
+        <label for="fopcaoSim">Sim</label><br>
+
+        
+        <input type="radio" name="fescolha" id="fopcaoNao" value="Nao">
+        <label for="fopcaoNao">Não</label><br>
+
+        
+        <input type="radio" name="fescolha" id="fopcaoTalvez" value="Talvez">
+        <label for="fopcaoTalvez">Talvez</label><br>
+        <br>
+        <br>
+        
+        <!-- Checkbox -->
+        
+        <input type="checkbox" name="freceberInformeEmail" id="freceberInformeEmail" value="Email" checked>
+        <label for="freceberInformeEmail">Reber Informe via Email</label><br>
+
+        
+        <input type="checkbox" name="fReceberInformeWhats" id="fReceberInformeWhats" value="Whats" checked>
+        <label for="fReceberInformeWhats">Reber Informe via Whatsapp</label><br>
+        <br>
+        
+        <!-- Color -->
+        <label for="fcolor">Selecione uma cor:</label>
+        <input type="color" id="fcolor" name="fcolor">
+
+        <br>
+        <br>
+        <!-- Date -->
+        <label for="fdateMax">DataList: Nascimento até 1990:</label>
+        <input type="date" id="fdateMax" name="fdateMax" max="1990-01-01">
+        <br><br>
+        <label for="fdateMin">DataList: Nascimento a partir de 2000:</label>
+        <input type="date" id="fdateMin" name="fdateMin" min="2000-01-02" value="2020-05-08">
+        <br><br>
+
+        <!-- Datetime-local -->
+        <label for="fdateTimeLocal">DataList::</label>
+        <input type="datetime-local" id="fdateTimeLocal" name="fdateTimeLocal">
+        <br><br>
+
+        <!-- Hora -->
+         <label for="ftime">Hora: </label>
+        <input type="time" id="ftime" name="ftime">
+        <br><br>
+
+        <!-- Semana -->
+        <label for="fweek">Semana: </label>
+        <input type="week" id="fweek" name="fweek">
+        <br><br>
+
+        <!-- Mês /Ano -->
+        <label for="fmonth">Mes e Ano: </label>
+        <input type="month" id="fmonth" name="fmonth">
+        <br><br>
+
+        <!-- Email -->
+        <label for="femail">E-mail:</label>
+        <input type="email" id="femail" name="femail" placeholder="user@servidor.com.br">
+        <br><br>
+
+        <!-- tipo de arquivo -->
+        <label for="ffile">Selecione um Arquivo:</label>
+        <input type="file" id="ffile" name="ffile">
+        <br><br>
+
+
+
+        <!-- Perquisa tipo de entrada-->
+        <label for="fsearch">Pesquisa: </label>
+        <input type="search" id="fsearch" name="fsearch">
+        <br><br>
+
+        <!-- Entrada para telefone-->
+        <label for="ftel">Telefone: </label>
+        <input type="tel" id="ftel" name="ftel" placeholder="47-00000-0000" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" required>
+
+
+
+        <br>
+        <br>
+        <!-- Botao submit -->
+        <input type="submit" value="Enviar">
+
+        <!-- Botao reset -->
+        <input type="reset" value="Limpar">
+
+        <!-- Botao -->
+        <input type="button" onclick="alert('Olá vc clicou no botão...')"  value="Click Me!!">
+   
+        <!-- ELEMENTO BUTTON -->
+        <button type="submit" formnovalidate="formnovalidate" formtarget="_blank" formmethod="get" formaction="/index.html" name="BOTAO" value="SA" >Elemento Botão</button>
+    
+        <input type="image" src="emoji.png" alt="Submit" formtarget="_blank" formmethod="get" width="48" height="48">
+    </form>    
+    <br><br>
+    <!-- elemento input ligado ao form, porém fora dele...-->
+    <label for="ftext2">Campo de texto fora do form:</label><br>
+    <input type="text" id="ftext2" name="ftext2" form="form1">
+
+</body>
+</html>
